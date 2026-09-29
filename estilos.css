@@ -1,37 +1,24 @@
 :root {
 
-    /* =========================
-       COLORES DE LA MARCA
-    ========================== */
-
     --fondo: #F2F5F8;
-
     --superficie: #FFFFFF;
 
     --texto-principal: #263746;
-
     --texto-secundario: #617383;
 
     --acento: #5B7C99;
 
     --borde: #D3DDE5;
 
-
-    /* =========================
-       TIPOGRAFÍAS
-    ========================== */
-
     --fuente-titulo: 'Poppins', sans-serif;
-
     --fuente-cuerpo: 'Inter', sans-serif;
 
 }
 
 
-
-/* =========================
-   GENERAL
-========================== */
+/* ========================= */
+/* GENERAL */
+/* ========================= */
 
 * {
     box-sizing: border-box;
@@ -51,10 +38,9 @@ body {
 }
 
 
-
-/* =========================
-   ENCABEZADO
-========================== */
+/* ========================= */
+/* ENCABEZADO */
+/* ========================= */
 
 header {
 
@@ -104,10 +90,9 @@ header {
 }
 
 
-
-/* =========================
-   BOTÓN AGREGAR
-========================== */
+/* ========================= */
+/* BOTÓN AGREGAR */
+/* ========================= */
 
 .boton-agregar {
 
@@ -139,10 +124,9 @@ header {
 }
 
 
-
-/* =========================
-   ESTRUCTURA
-========================== */
+/* ========================= */
+/* CONTENEDOR */
+/* ========================= */
 
 .contenedor {
 
@@ -161,10 +145,9 @@ header {
 }
 
 
-
-/* =========================
-   BARRA DE MESES
-========================== */
+/* ========================= */
+/* BARRA LATERAL */
+/* ========================= */
 
 .barra-lateral {
 
@@ -184,9 +167,6 @@ header {
 
 }
 
-
-
-/* Encabezado */
 
 .titulo-meses {
 
@@ -249,11 +229,6 @@ header {
 
 }
 
-
-
-/* =========================
-   MESES
-========================== */
 
 .meses {
 
@@ -329,8 +304,7 @@ header {
 }
 
 
-
-/* Mes seleccionado */
+/* MES SELECCIONADO */
 
 .mes.seleccionado {
 
@@ -338,13 +312,13 @@ header {
 
     color: white;
 
-    box-shadow: 0 5px 12px rgba(91, 124, 153, 0.18);
+    box-shadow:
+        0 5px 12px rgba(91, 124, 153, 0.18);
 
 }
 
 
 .mes.seleccionado > span,
-
 .mes.seleccionado small {
 
     color: #E4ECF2;
@@ -352,10 +326,9 @@ header {
 }
 
 
-
-/* =========================
-   TÍTULO DE EVENTOS
-========================== */
+/* ========================= */
+/* TÍTULO EVENTOS */
+/* ========================= */
 
 .titulo-seccion {
 
@@ -420,10 +393,9 @@ header {
 }
 
 
-
-/* =========================
-   EVENTOS
-========================== */
+/* ========================= */
+/* EVENTOS */
+/* ========================= */
 
 .eventos {
 
@@ -442,6 +414,12 @@ header {
 
     border: 1px solid var(--borde);
 
+    /*
+       La barra comienza invisible.
+    */
+
+    border-left: 5px solid transparent;
+
     border-radius: 14px;
 
     padding: 20px;
@@ -457,31 +435,26 @@ header {
 }
 
 
+/*
+   LA BARRA AZUL SOLO APARECE
+   AL PASAR EL MOUSE
+*/
+
 .evento:hover {
 
-    border-color: var(--acento);
+    border-left-color: var(--acento);
 
     transform: translateY(-2px);
 
-    box-shadow: 0 6px 18px rgba(38, 55, 70, 0.06);
+    box-shadow:
+        0 6px 18px rgba(38, 55, 70, 0.06);
 
 }
 
 
-
-/* Evento destacado */
-
-.evento.destacado {
-
-    border-left: 5px solid var(--acento);
-
-}
-
-
-
-/* =========================
-   FECHA
-========================== */
+/* ========================= */
+/* FECHA EVENTO */
+/* ========================= */
 
 .fecha {
 
@@ -522,14 +495,15 @@ header {
 }
 
 
-
-/* =========================
-   INFORMACIÓN
-========================== */
+/* ========================= */
+/* INFORMACIÓN */
+/* ========================= */
 
 .informacion {
 
     flex: 1;
+
+    min-width: 0;
 
 }
 
@@ -582,10 +556,9 @@ header {
 }
 
 
-
-/* =========================
-   ETIQUETAS
-========================== */
+/* ========================= */
+/* ETIQUETAS */
+/* ========================= */
 
 .etiqueta {
 
@@ -627,10 +600,114 @@ header {
 }
 
 
+/* ========================= */
+/* BOTONES EDITAR / BORRAR */
+/* ========================= */
 
-/* =========================
-   CALENDARIO
-========================== */
+.acciones-evento {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+}
+
+
+.acciones-evento button {
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 7px;
+
+    font-family: var(--fuente-cuerpo);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.boton-editar {
+
+    background-color: #E4ECF2;
+
+    color: var(--acento);
+
+}
+
+
+.boton-editar:hover {
+
+    background-color: var(--borde);
+
+}
+
+
+.boton-borrar {
+
+    background-color: #F1F3F5;
+
+    color: #617383;
+
+}
+
+
+.boton-borrar:hover {
+
+    background-color: #DDE4EA;
+
+}
+
+
+/* ========================= */
+/* SIN EVENTOS */
+/* ========================= */
+
+.sin-eventos {
+
+    background-color: var(--superficie);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 14px;
+
+    padding: 40px;
+
+    text-align: center;
+
+}
+
+
+.sin-eventos h3 {
+
+    margin: 0 0 8px;
+
+    font-family: var(--fuente-titulo);
+
+}
+
+
+.sin-eventos p {
+
+    margin: 0;
+
+    color: var(--texto-secundario);
+
+}
+
+
+/* ========================= */
+/* CALENDARIO */
+/* ========================= */
 
 .calendario {
 
@@ -646,9 +723,6 @@ header {
 
 }
 
-
-
-/* Encabezado */
 
 .titulo-calendario {
 
@@ -673,9 +747,6 @@ header {
 
 }
 
-
-
-/* Navegación */
 
 .navegacion {
 
@@ -712,9 +783,6 @@ header {
 }
 
 
-
-/* Días de la semana */
-
 .dias-semana {
 
     display: grid;
@@ -733,9 +801,6 @@ header {
 
 }
 
-
-
-/* Días */
 
 .dias {
 
@@ -764,6 +829,8 @@ header {
 
     cursor: pointer;
 
+    position: relative;
+
 }
 
 
@@ -774,8 +841,12 @@ header {
 }
 
 
+.dias .dia-vacio {
 
-/* Día actual */
+    cursor: default;
+
+}
+
 
 .dias .hoy {
 
@@ -785,30 +856,8 @@ header {
 
     font-weight: 700;
 
-    position: relative;
-
 }
 
-
-.hoy span {
-
-    width: 4px;
-
-    height: 4px;
-
-    background-color: white;
-
-    border-radius: 50%;
-
-    position: absolute;
-
-    bottom: 8px;
-
-}
-
-
-
-/* Días con eventos */
 
 .dias .evento-dia {
 
@@ -821,10 +870,40 @@ header {
 }
 
 
+/*
+   Si el día es hoy y también tiene evento,
+   conserva el estilo de hoy.
+*/
 
-/* =========================
-   FORMULARIO
-========================== */
+.dias .hoy.evento-dia {
+
+    background-color: var(--acento);
+
+    color: white;
+
+}
+
+
+.punto-evento {
+
+    width: 4px;
+
+    height: 4px;
+
+    background-color: currentColor;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    bottom: 7px;
+
+}
+
+
+/* ========================= */
+/* FORMULARIO */
+/* ========================= */
 
 .formulario-evento {
 
@@ -844,9 +923,6 @@ header {
 
 }
 
-
-
-/* Título */
 
 .titulo-formulario {
 
@@ -875,9 +951,6 @@ header {
 }
 
 
-
-/* Formulario */
-
 .formulario {
 
     display: flex;
@@ -888,9 +961,6 @@ header {
 
 }
 
-
-
-/* Campos */
 
 .campo {
 
@@ -913,9 +983,6 @@ header {
 
 }
 
-
-
-/* Inputs */
 
 .campo input,
 .campo select,
@@ -942,22 +1009,17 @@ header {
 }
 
 
-
-/* Campo seleccionado */
-
 .campo input:focus,
 .campo select:focus,
 .campo textarea:focus {
 
     border-color: var(--acento);
 
-    box-shadow: 0 0 0 3px rgba(91, 124, 153, 0.10);
+    box-shadow:
+        0 0 0 3px rgba(91, 124, 153, 0.10);
 
 }
 
-
-
-/* Fecha y hora */
 
 .fila-formulario {
 
@@ -970,9 +1032,6 @@ header {
 }
 
 
-
-/* Textarea */
-
 .campo textarea {
 
     resize: vertical;
@@ -980,10 +1039,9 @@ header {
 }
 
 
-
-/* =========================
-   BOTONES DEL FORMULARIO
-========================== */
+/* ========================= */
+/* BOTONES FORMULARIO */
+/* ========================= */
 
 .botones-formulario {
 
@@ -1001,9 +1059,6 @@ header {
 
 }
 
-
-
-/* Cancelar */
 
 .boton-cancelar {
 
@@ -1033,9 +1088,6 @@ header {
 }
 
 
-
-/* Crear */
-
 .boton-crear {
 
     background-color: var(--acento);
@@ -1064,10 +1116,9 @@ header {
 }
 
 
-
-/* =========================
-   FOOTER
-========================== */
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
 footer {
 
@@ -1082,13 +1133,11 @@ footer {
 }
 
 
-
-/* =========================
-   CELULAR
-========================== */
+/* ========================= */
+/* TABLET */
+/* ========================= */
 
 @media (max-width: 800px) {
-
 
     .encabezado {
 
@@ -1137,13 +1186,11 @@ footer {
 }
 
 
-
-/* =========================
-   FORMULARIO EN CELULAR
-========================== */
+/* ========================= */
+/* MÓVIL */
+/* ========================= */
 
 @media (max-width: 600px) {
-
 
     .formulario-evento {
 
@@ -1170,6 +1217,42 @@ footer {
     .boton-crear {
 
         width: 100%;
+
+    }
+
+
+    .evento {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .acciones-evento {
+
+        width: 100%;
+
+        margin-left: 95px;
+
+    }
+
+
+    .acciones-evento button {
+
+        flex: 1;
+
+    }
+
+
+    .datos {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
 
     }
 

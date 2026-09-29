@@ -4,15 +4,18 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fuentes de Google -->
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Archivo CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
 
     <title>AgendaWeb</title>
@@ -23,9 +26,9 @@
 <body>
 
 
-    <!-- =========================
-         ENCABEZADO
-    ========================== -->
+    <!-- ========================= -->
+    <!-- ENCABEZADO -->
+    <!-- ========================= -->
 
     <header>
 
@@ -35,15 +38,20 @@
 
                 <h1>AgendaWeb</h1>
 
-                <p>Organiza tus eventos y actividades</p>
+                <p>
+                    Organiza tus eventos y actividades
+                </p>
 
             </div>
 
 
-            <!-- Botón para mostrar formulario -->
+            <button
+                class="boton-agregar"
+                type="button"
+                onclick="mostrarFormulario()">
 
-            <button class="boton-agregar" onclick="mostrarFormulario()">
                 + Agregar evento
+
             </button>
 
         </div>
@@ -52,29 +60,36 @@
 
 
 
-    <!-- =========================
-         CONTENIDO PRINCIPAL
-    ========================== -->
+    <!-- ========================= -->
+    <!-- CONTENEDOR -->
+    <!-- ========================= -->
 
     <div class="contenedor">
 
 
-        <!-- =========================
-             BARRA DE MESES
-        ========================== -->
+        <!-- ========================= -->
+        <!-- BARRA LATERAL -->
+        <!-- ========================= -->
 
         <aside class="barra-lateral">
 
 
             <div class="titulo-meses">
 
-                <span class="icono-calendario">▣</span>
+                <span class="icono-calendario">
+                    ▣
+                </span>
+
 
                 <div>
 
-                    <h2>Mis meses</h2>
+                    <h2>
+                        Mis meses
+                    </h2>
 
-                    <p>2026 - 2027</p>
+                    <p>
+                        2026 - 2027
+                    </p>
 
                 </div>
 
@@ -85,68 +100,145 @@
             <div class="meses">
 
 
-                <div class="mes seleccionado">
+                <!-- SEPTIEMBRE -->
 
-                    <span>SEP</span>
+                <div
+                    class="mes seleccionado"
+                    data-mes="8"
+                    data-anio="2026"
+                    onclick="seleccionarMes(8, 2026)">
 
-                    <strong>Septiembre</strong>
+                    <span>
+                        SEP
+                    </span>
 
-                    <small>4 eventos</small>
+                    <strong>
+                        Septiembre
+                    </strong>
 
-                </div>
-
-
-                <div class="mes">
-
-                    <span>OCT</span>
-
-                    <strong>Octubre</strong>
-
-                    <small>Próximo mes</small>
-
-                </div>
-
-
-                <div class="mes">
-
-                    <span>NOV</span>
-
-                    <strong>Noviembre</strong>
-
-                    <small>2026</small>
+                    <small id="contadorMes8">
+                        0 eventos
+                    </small>
 
                 </div>
 
 
-                <div class="mes">
 
-                    <span>DIC</span>
+                <!-- OCTUBRE -->
 
-                    <strong>Diciembre</strong>
+                <div
+                    class="mes"
+                    data-mes="9"
+                    data-anio="2026"
+                    onclick="seleccionarMes(9, 2026)">
 
-                    <small>2026</small>
+                    <span>
+                        OCT
+                    </span>
+
+                    <strong>
+                        Octubre
+                    </strong>
+
+                    <small id="contadorMes9">
+                        0 eventos
+                    </small>
 
                 </div>
 
 
-                <div class="mes">
 
-                    <span>ENE</span>
+                <!-- NOVIEMBRE -->
 
-                    <strong>Enero</strong>
+                <div
+                    class="mes"
+                    data-mes="10"
+                    data-anio="2026"
+                    onclick="seleccionarMes(10, 2026)">
 
-                    <small>2027</small>
+                    <span>
+                        NOV
+                    </span>
+
+                    <strong>
+                        Noviembre
+                    </strong>
+
+                    <small id="contadorMes10">
+                        0 eventos
+                    </small>
 
                 </div>
 
 
-                <div class="mes">
 
-                    <span>FEB</span>
+                <!-- DICIEMBRE -->
 
-                    <strong>Febrero</strong>
+                <div
+                    class="mes"
+                    data-mes="11"
+                    data-anio="2026"
+                    onclick="seleccionarMes(11, 2026)">
 
-                    <small>2027</small>
+                    <span>
+                        DIC
+                    </span>
+
+                    <strong>
+                        Diciembre
+                    </strong>
+
+                    <small id="contadorMes11">
+                        0 eventos
+                    </small>
+
+                </div>
+
+
+
+                <!-- ENERO -->
+
+                <div
+                    class="mes"
+                    data-mes="0"
+                    data-anio="2027"
+                    onclick="seleccionarMes(0, 2027)">
+
+                    <span>
+                        ENE
+                    </span>
+
+                    <strong>
+                        Enero
+                    </strong>
+
+                    <small id="contadorMes0">
+                        0 eventos
+                    </small>
+
+                </div>
+
+
+
+                <!-- FEBRERO -->
+
+                <div
+                    class="mes"
+                    data-mes="1"
+                    data-anio="2027"
+                    onclick="seleccionarMes(1, 2027)">
+
+                    <span>
+                        FEB
+                    </span>
+
+                    <strong>
+                        Febrero
+                    </strong>
+
+                    <small id="contadorMes1">
+                        0 eventos
+                    </small>
 
                 </div>
 
@@ -157,18 +249,20 @@
 
 
 
-        <!-- =========================
-             CONTENIDO
-        ========================== -->
+        <!-- ========================= -->
+        <!-- CONTENIDO PRINCIPAL -->
+        <!-- ========================= -->
 
         <main>
 
 
-            <!-- =========================
-                 EVENTOS
-            ========================== -->
+            <!-- ========================= -->
+            <!-- EVENTOS -->
+            <!-- ========================= -->
 
-            <section class="seccion-eventos" id="seccionEventos">
+            <section
+                class="seccion-eventos"
+                id="seccionEventos">
 
 
                 <div class="titulo-seccion">
@@ -176,23 +270,35 @@
 
                     <div>
 
-                        <span class="subtitulo">
+                        <span
+                            class="subtitulo"
+                            id="subtituloEventos">
+
                             SEPTIEMBRE 2026
+
                         </span>
+
 
                         <h2>
                             Próximos eventos
                         </h2>
 
-                        <p>
+
+                        <p id="descripcionMes">
+
                             Tienes varias actividades programadas.
+
                         </p>
 
                     </div>
 
 
-                    <span class="contador">
-                        4 eventos
+                    <span
+                        class="contador"
+                        id="contadorEventos">
+
+                        0 eventos
+
                     </span>
 
 
@@ -200,231 +306,26 @@
 
 
 
-                <div class="eventos">
-
-
-                    <!-- EVENTO 1 -->
-
-                    <article class="evento destacado">
-
-
-                        <div class="fecha">
-
-                            <span class="dia">
-                                23
-                            </span>
-
-                            <span class="mes-corto">
-                                SEP
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="informacion">
-
-                            <span class="hora">
-                                10:00 AM
-                            </span>
-
-                            <h3>
-                                Reunión de proyecto
-                            </h3>
-
-                            <p>
-                                Revisión de avances y organización de actividades.
-                            </p>
-
-
-                            <div class="datos">
-
-                                <span>
-                                    ● Sala de juntas
-                                </span>
-
-                                <span class="etiqueta trabajo">
-                                    Trabajo
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- EVENTO 2 -->
-
-                    <article class="evento">
-
-
-                        <div class="fecha">
-
-                            <span class="dia">
-                                24
-                            </span>
-
-                            <span class="mes-corto">
-                                SEP
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="informacion">
-
-                            <span class="hora">
-                                12:00 PM
-                            </span>
-
-                            <h3>
-                                Entrega de actividad
-                            </h3>
-
-                            <p>
-                                Entrega de proyecto de Desarrollo de Aplicaciones Web.
-                            </p>
-
-
-                            <div class="datos">
-
-                                <span>
-                                    ● Plataforma escolar
-                                </span>
-
-                                <span class="etiqueta escuela">
-                                    Escuela
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- EVENTO 3 -->
-
-                    <article class="evento">
-
-
-                        <div class="fecha">
-
-                            <span class="dia">
-                                26
-                            </span>
-
-                            <span class="mes-corto">
-                                SEP
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="informacion">
-
-                            <span class="hora">
-                                7:00 PM
-                            </span>
-
-                            <h3>
-                                Partida con amigos
-                            </h3>
-
-                            <p>
-                                Sesión de juego en línea con amigos.
-                            </p>
-
-
-                            <div class="datos">
-
-                                <span>
-                                    ● En línea
-                                </span>
-
-                                <span class="etiqueta personal">
-                                    Personal
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                    </article>
-
-
-
-                    <!-- EVENTO 4 -->
-
-                    <article class="evento">
-
-
-                        <div class="fecha">
-
-                            <span class="dia">
-                                28
-                            </span>
-
-                            <span class="mes-corto">
-                                SEP
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="informacion">
-
-                            <span class="hora">
-                                9:00 AM
-                            </span>
-
-                            <h3>
-                                Planificación semanal
-                            </h3>
-
-                            <p>
-                                Organización de pendientes y actividades de la semana.
-                            </p>
-
-
-                            <div class="datos">
-
-                                <span>
-                                    ● Oficina
-                                </span>
-
-                                <span class="etiqueta trabajo">
-                                    Trabajo
-                                </span>
-
-                            </div>
-
-                        </div>
-
-
-                    </article>
-
+                <!-- AQUÍ SE GENERAN LOS EVENTOS -->
+
+                <div
+                    class="eventos"
+                    id="listaEventos">
 
                 </div>
+
 
             </section>
 
 
 
-            <!-- =========================
-                 CALENDARIO
-            ========================== -->
+            <!-- ========================= -->
+            <!-- CALENDARIO -->
+            <!-- ========================= -->
 
-            <section class="calendario" id="calendario">
+            <section
+                class="calendario"
+                id="calendario">
 
 
                 <div class="titulo-calendario">
@@ -436,22 +337,37 @@
                             VISTA MENSUAL
                         </span>
 
-                        <h2>
+
+                        <h2 id="tituloCalendario">
                             Septiembre 2026
                         </h2>
 
                     </div>
 
 
+
                     <div class="navegacion">
 
-                        <button>
+
+                        <button
+                            type="button"
+                            onclick="mesAnterior()"
+                            title="Mes anterior">
+
                             &lt;
+
                         </button>
 
-                        <button>
+
+                        <button
+                            type="button"
+                            onclick="mesSiguiente()"
+                            title="Mes siguiente">
+
                             &gt;
+
                         </button>
+
 
                     </div>
 
@@ -476,79 +392,11 @@
 
 
 
-                <!-- DÍAS -->
+                <!-- DÍAS GENERADOS POR JAVASCRIPT -->
 
-                <div class="dias">
-
-
-                    <div class="dia-vacio"></div>
-                    <div class="dia-vacio"></div>
-
-                    <div>1</div>
-                    <div>2</div>
-                    <div>3</div>
-                    <div>4</div>
-                    <div>5</div>
-
-                    <div>6</div>
-                    <div>7</div>
-                    <div>8</div>
-                    <div>9</div>
-                    <div>10</div>
-                    <div>11</div>
-                    <div>12</div>
-
-                    <div>13</div>
-                    <div>14</div>
-                    <div>15</div>
-                    <div>16</div>
-                    <div>17</div>
-                    <div>18</div>
-                    <div>19</div>
-
-                    <div>20</div>
-                    <div>21</div>
-                    <div>22</div>
-
-
-                    <div class="hoy">
-
-                        23
-
-                        <span></span>
-
-                    </div>
-
-
-                    <div class="evento-dia">
-                        24
-                    </div>
-
-                    <div>
-                        25
-                    </div>
-
-                    <div class="evento-dia">
-                        26
-                    </div>
-
-
-                    <div>
-                        27
-                    </div>
-
-                    <div class="evento-dia">
-                        28
-                    </div>
-
-                    <div>
-                        29
-                    </div>
-
-                    <div>
-                        30
-                    </div>
-
+                <div
+                    class="dias"
+                    id="diasCalendario">
 
                 </div>
 
@@ -557,26 +405,34 @@
 
 
 
-            <!-- =========================
-                 FORMULARIO
-            ========================== -->
+            <!-- ========================= -->
+            <!-- FORMULARIO -->
+            <!-- ========================= -->
 
-            <section class="formulario-evento" id="formularioEvento">
+            <section
+                class="formulario-evento"
+                id="formularioEvento">
 
 
                 <div class="titulo-formulario">
+
 
                     <span class="subtitulo">
                         NUEVO EVENTO
                     </span>
 
-                    <h2>
+
+                    <h2 id="tituloFormulario">
                         Agregar evento
                     </h2>
 
-                    <p>
+
+                    <p id="descripcionFormulario">
+
                         Completa la información de tu nuevo evento.
+
                     </p>
+
 
                 </div>
 
@@ -593,11 +449,11 @@
                             Título del evento
                         </label>
 
+
                         <input
                             type="text"
                             id="titulo"
-                            placeholder="Ej. Reunión de proyecto"
-                        >
+                            placeholder="Ej. Reunión de proyecto">
 
                     </div>
 
@@ -614,10 +470,10 @@
                                 Fecha
                             </label>
 
+
                             <input
                                 type="date"
-                                id="fecha"
-                            >
+                                id="fecha">
 
                         </div>
 
@@ -629,10 +485,10 @@
                                 Hora
                             </label>
 
+
                             <input
                                 type="time"
-                                id="hora"
-                            >
+                                id="hora">
 
                         </div>
 
@@ -649,11 +505,11 @@
                             Lugar
                         </label>
 
+
                         <input
                             type="text"
                             id="lugar"
-                            placeholder="Ej. Sala de juntas"
-                        >
+                            placeholder="Ej. Sala de juntas">
 
                     </div>
 
@@ -674,15 +530,15 @@
                                 Selecciona una categoría
                             </option>
 
-                            <option>
+                            <option value="Trabajo">
                                 Trabajo
                             </option>
 
-                            <option>
+                            <option value="Escuela">
                                 Escuela
                             </option>
 
-                            <option>
+                            <option value="Personal">
                                 Personal
                             </option>
 
@@ -704,8 +560,7 @@
                         <textarea
                             id="descripcion"
                             rows="4"
-                            placeholder="Escribe una descripción del evento..."
-                        ></textarea>
+                            placeholder="Escribe una descripción del evento..."></textarea>
 
                     </div>
 
@@ -716,21 +571,29 @@
                     <div class="botones-formulario">
 
 
+                        <!-- REGRESAR SIN GUARDAR -->
+
                         <button
                             class="boton-cancelar"
                             type="button"
-                            onclick="ocultarFormulario()"
-                        >
-                            Cancelar
+                            onclick="ocultarFormulario()">
+
+                            ← Regresar
+
                         </button>
 
+
+
+                        <!-- GUARDAR -->
 
                         <button
                             class="boton-crear"
                             type="button"
-                            onclick="ocultarFormulario()"
-                        >
+                            id="botonGuardar"
+                            onclick="guardarEvento()">
+
                             Crear evento
+
                         </button>
 
 
@@ -750,9 +613,9 @@
 
 
 
-    <!-- =========================
-         PIE DE PÁGINA
-    ========================== -->
+    <!-- ========================= -->
+    <!-- PIE DE PÁGINA -->
+    <!-- ========================= -->
 
     <footer>
 
@@ -764,7 +627,7 @@
 
 
 
-    <!-- JavaScript -->
+    <!-- JAVASCRIPT -->
 
     <script src="script.js"></script>
 
