@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>AgendaWeb</title>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+
+        <div class="encabezado">
+
+            <div>
+
+                <h1>AgendaWeb</h1>
+
+                <p>Organiza tus eventos y actividades</p>
+
+            </div>
+
+
+            <!-- Botón para mostrar formulario -->
+
+            <button class="boton-agregar" onclick="mostrarFormulario()">
+                + Agregar evento
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <div class="contenedor">
+
+
+        <!-- =========================
+             BARRA DE MESES
+        ========================== -->
+
+        <aside class="barra-lateral">
+
+
+            <div class="titulo-meses">
+
+                <span class="icono-calendario">▣</span>
+
+                <div>
+
+                    <h2>Mis meses</h2>
+
+                    <p>2026 - 2027</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="meses">
+
+
+                <div class="mes seleccionado">
+
+                    <span>SEP</span>
+
+                    <strong>Septiembre</strong>
+
+                    <small>4 eventos</small>
+
+                </div>
+
+
+                <div class="mes">
+
+                    <span>OCT</span>
+
+                    <strong>Octubre</strong>
+
+                    <small>Próximo mes</small>
+
+                </div>
+
+
+                <div class="mes">
+
+                    <span>NOV</span>
+
+                    <strong>Noviembre</strong>
+
+                    <small>2026</small>
+
+                </div>
+
+
+                <div class="mes">
+
+                    <span>DIC</span>
+
+                    <strong>Diciembre</strong>
+
+                    <small>2026</small>
+
+                </div>
+
+
+                <div class="mes">
+
+                    <span>ENE</span>
+
+                    <strong>Enero</strong>
+
+                    <small>2027</small>
+
+                </div>
+
+
+                <div class="mes">
+
+                    <span>FEB</span>
+
+                    <strong>Febrero</strong>
+
+                    <small>2027</small>
+
+                </div>
+
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =========================
+             CONTENIDO
+        ========================== -->
+
+        <main>
+
+
+            <!-- =========================
+                 EVENTOS
+            ========================== -->
+
+            <section class="seccion-eventos" id="seccionEventos">
+
+
+                <div class="titulo-seccion">
+
+
+                    <div>
+
+                        <span class="subtitulo">
+                            SEPTIEMBRE 2026
+                        </span>
+
+                        <h2>
+                            Próximos eventos
+                        </h2>
+
+                        <p>
+                            Tienes varias actividades programadas.
+                        </p>
+
+                    </div>
+
+
+                    <span class="contador">
+                        4 eventos
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="eventos">
+
+
+                    <!-- EVENTO 1 -->
+
+                    <article class="evento destacado">
+
+
+                        <div class="fecha">
+
+                            <span class="dia">
+                                23
+                            </span>
+
+                            <span class="mes-corto">
+                                SEP
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="informacion">
+
+                            <span class="hora">
+                                10:00 AM
+                            </span>
+
+                            <h3>
+                                Reunión de proyecto
+                            </h3>
+
+                            <p>
+                                Revisión de avances y organización de actividades.
+                            </p>
+
+
+                            <div class="datos">
+
+                                <span>
+                                    ● Sala de juntas
+                                </span>
+
+                                <span class="etiqueta trabajo">
+                                    Trabajo
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- EVENTO 2 -->
+
+                    <article class="evento">
+
+
+                        <div class="fecha">
+
+                            <span class="dia">
+                                24
+                            </span>
+
+                            <span class="mes-corto">
+                                SEP
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="informacion">
+
+                            <span class="hora">
+                                12:00 PM
+                            </span>
+
+                            <h3>
+                                Entrega de actividad
+                            </h3>
+
+                            <p>
+                                Entrega de proyecto de Desarrollo de Aplicaciones Web.
+                            </p>
+
+
+                            <div class="datos">
+
+                                <span>
+                                    ● Plataforma escolar
+                                </span>
+
+                                <span class="etiqueta escuela">
+                                    Escuela
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- EVENTO 3 -->
+
+                    <article class="evento">
+
+
+                        <div class="fecha">
+
+                            <span class="dia">
+                                26
+                            </span>
+
+                            <span class="mes-corto">
+                                SEP
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="informacion">
+
+                            <span class="hora">
+                                7:00 PM
+                            </span>
+
+                            <h3>
+                                Partida con amigos
+                            </h3>
+
+                            <p>
+                                Sesión de juego en línea con amigos.
+                            </p>
+
+
+                            <div class="datos">
+
+                                <span>
+                                    ● En línea
+                                </span>
+
+                                <span class="etiqueta personal">
+                                    Personal
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- EVENTO 4 -->
+
+                    <article class="evento">
+
+
+                        <div class="fecha">
+
+                            <span class="dia">
+                                28
+                            </span>
+
+                            <span class="mes-corto">
+                                SEP
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="informacion">
+
+                            <span class="hora">
+                                9:00 AM
+                            </span>
+
+                            <h3>
+                                Planificación semanal
+                            </h3>
+
+                            <p>
+                                Organización de pendientes y actividades de la semana.
+                            </p>
+
+
+                            <div class="datos">
+
+                                <span>
+                                    ● Oficina
+                                </span>
+
+                                <span class="etiqueta trabajo">
+                                    Trabajo
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =========================
+                 CALENDARIO
+            ========================== -->
+
+            <section class="calendario" id="calendario">
+
+
+                <div class="titulo-calendario">
+
+
+                    <div>
+
+                        <span class="subtitulo">
+                            VISTA MENSUAL
+                        </span>
+
+                        <h2>
+                            Septiembre 2026
+                        </h2>
+
+                    </div>
+
+
+                    <div class="navegacion">
+
+                        <button>
+                            &lt;
+                        </button>
+
+                        <button>
+                            &gt;
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- DÍAS DE LA SEMANA -->
+
+                <div class="dias-semana">
+
+                    <span>Lun</span>
+                    <span>Mar</span>
+                    <span>Mié</span>
+                    <span>Jue</span>
+                    <span>Vie</span>
+                    <span>Sáb</span>
+                    <span>Dom</span>
+
+                </div>
+
+
+
+                <!-- DÍAS -->
+
+                <div class="dias">
+
+
+                    <div class="dia-vacio"></div>
+                    <div class="dia-vacio"></div>
+
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+
+                    <div>6</div>
+                    <div>7</div>
+                    <div>8</div>
+                    <div>9</div>
+                    <div>10</div>
+                    <div>11</div>
+                    <div>12</div>
+
+                    <div>13</div>
+                    <div>14</div>
+                    <div>15</div>
+                    <div>16</div>
+                    <div>17</div>
+                    <div>18</div>
+                    <div>19</div>
+
+                    <div>20</div>
+                    <div>21</div>
+                    <div>22</div>
+
+
+                    <div class="hoy">
+
+                        23
+
+                        <span></span>
+
+                    </div>
+
+
+                    <div class="evento-dia">
+                        24
+                    </div>
+
+                    <div>
+                        25
+                    </div>
+
+                    <div class="evento-dia">
+                        26
+                    </div>
+
+
+                    <div>
+                        27
+                    </div>
+
+                    <div class="evento-dia">
+                        28
+                    </div>
+
+                    <div>
+                        29
+                    </div>
+
+                    <div>
+                        30
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =========================
+                 FORMULARIO
+            ========================== -->
+
+            <section class="formulario-evento" id="formularioEvento">
+
+
+                <div class="titulo-formulario">
+
+                    <span class="subtitulo">
+                        NUEVO EVENTO
+                    </span>
+
+                    <h2>
+                        Agregar evento
+                    </h2>
+
+                    <p>
+                        Completa la información de tu nuevo evento.
+                    </p>
+
+                </div>
+
+
+
+                <div class="formulario">
+
+
+                    <!-- TÍTULO -->
+
+                    <div class="campo">
+
+                        <label for="titulo">
+                            Título del evento
+                        </label>
+
+                        <input
+                            type="text"
+                            id="titulo"
+                            placeholder="Ej. Reunión de proyecto"
+                        >
+
+                    </div>
+
+
+
+                    <!-- FECHA Y HORA -->
+
+                    <div class="fila-formulario">
+
+
+                        <div class="campo">
+
+                            <label for="fecha">
+                                Fecha
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fecha"
+                            >
+
+                        </div>
+
+
+
+                        <div class="campo">
+
+                            <label for="hora">
+                                Hora
+                            </label>
+
+                            <input
+                                type="time"
+                                id="hora"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- LUGAR -->
+
+                    <div class="campo">
+
+                        <label for="lugar">
+                            Lugar
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lugar"
+                            placeholder="Ej. Sala de juntas"
+                        >
+
+                    </div>
+
+
+
+                    <!-- CATEGORÍA -->
+
+                    <div class="campo">
+
+                        <label for="categoria">
+                            Categoría
+                        </label>
+
+
+                        <select id="categoria">
+
+                            <option value="">
+                                Selecciona una categoría
+                            </option>
+
+                            <option>
+                                Trabajo
+                            </option>
+
+                            <option>
+                                Escuela
+                            </option>
+
+                            <option>
+                                Personal
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPCIÓN -->
+
+                    <div class="campo">
+
+                        <label for="descripcion">
+                            Descripción
+                        </label>
+
+
+                        <textarea
+                            id="descripcion"
+                            rows="4"
+                            placeholder="Escribe una descripción del evento..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- BOTONES -->
+
+                    <div class="botones-formulario">
+
+
+                        <button
+                            class="boton-cancelar"
+                            type="button"
+                            onclick="ocultarFormulario()"
+                        >
+                            Cancelar
+                        </button>
+
+
+                        <button
+                            class="boton-crear"
+                            type="button"
+                            onclick="ocultarFormulario()"
+                        >
+                            Crear evento
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer>
+
+        <p>
+            AgendaWeb · Organiza tu tiempo de manera sencilla
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
